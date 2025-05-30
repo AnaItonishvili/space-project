@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  background-image: url(./assets/background.jpg);
+  background-image: url(./assets/home/background-home-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -97,9 +97,10 @@ h1 {
   z-index: 999;
 }
 
-#menu-toggle:checked ~ .sidebar {
+#menu-toggle:checked~.sidebar {
   right: 0;
 }
+
 .sidebar-menu {
   padding: 118px 0px 32px 32px;
   list-style: none;
@@ -134,4 +135,100 @@ h1 {
 .close-btn img {
   width: 19px;
   height: 19px;
+}
+
+.tablet-navigation {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+    height: auto;
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  .tablet-navigation img {
+    padding: 24px 40px;
+  }
+
+  .tablet-navigation {
+    display: flex;
+  }
+
+  .tablet-navigation nav {
+    width: 100%;
+  }
+
+  .tablet-navigation nav ul {
+    background-color: #ffffff10;
+    backdrop-filter: blur(80px);
+
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    column-gap: 48px;
+
+    padding-right: 40px;
+
+  }
+
+  .tablet-navigation a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    padding: 38.5px 0;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .tablet-navigation a.active {
+    border-bottom: 2px solid white;
+  }
+
+  .tablet-navigation a span {
+    margin-right: 12px;
+    font-weight: 700;
+  }
+
+  .title {
+    margin-top: 128px;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  h1 {
+    font-size: 144px;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    line-height: 180%;
+    margin-bottom: 66px;
+    max-width: 512px;
+    margin: 0 auto;
+  }
+
+  .button {
+    width: 272px;
+    height: 272px;
+    margin-bottom: 128px;
+  }
+  .button span {
+    font-size: 32px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  /* desktop styles */
 }
