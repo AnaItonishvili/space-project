@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Barlow", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bellefair", sans-serif;
+}
+
+.navigation {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 16px;
+  text-align: center;
+  color: #d0d6f9;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 100px;
+}
+
+.paragraph {
+  text-align: center;
+  color: #d0d6f9;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.section {
+  padding: 0 24px;
+}
+
+.button {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 81px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 16px 0 white;
+  transform: scale(1.03);
+}
+
+.button span {
+  color: #0b0d17;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.bellefair {
+  font-family: "Bellefair", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 254px;
+  height: 100vh;
+  background-color: rgba(255 255 255 / 0.1);
+  backdrop-filter: blur(15px);
+  color: white;
+  transition: right 0.5s ease-in-out;
+  z-index: 999;
+}
+
+#menu-toggle:checked ~ .sidebar {
+  right: 0;
+}
+.sidebar-menu {
+  padding: 118px 0px 32px 32px;
+  list-style: none;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.sidebar-menu li {
+  margin-bottom: 24px;
+  height: 19px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  font-weight: 400;
+}
+
+.sidebar-menu li span {
+  font-weight: 700;
+  margin-right: 11px;
+  size: 16px;
+  height: 18px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+
+.close-btn img {
+  width: 19px;
+  height: 19px;
+}
