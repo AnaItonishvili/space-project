@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/navigation.css">
+    <link rel="stylesheet" href="../styles/technology.css">
+</head>
+
+<body>
+    <section class="navigation-list">
+      <div class="mobile-navigation">
+        <input type="checkbox" id="menu-toggle" hidden />
+        <div class="navigation">
+          <img
+            src="../assets/logo.svg"
+            width="40"
+            height="40"
+            alt="site logo"
+          />
+          <label for="menu-toggle" class="burger-btn">
+            <img
+              class="mobile"
+              src="../assets/burger.svg"
+              width="24"
+              height="21"
+              alt="burger menu"
+            />
+          </label>
+        </div>
+        <nav class="sidebar" id="sidebar">
+          <label for="menu-toggle" class="close-btn">
+            <img
+              src="../assets/X.svg"
+              alt="Close menu"
+              width="24"
+              height="24"
+            />
+          </label>
+          <ul class="sidebar-menu">
+            <li><span>00</span> HOME</li>
+            <li><span>01</span> ABOUT</li>
+            <li><span>02</span> PROJECTS</li>
+            <li><span>03</span> CONTACT</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="tablet-navigation">
+        <img src="../assets/logo.svg" width="40" height="40" alt="site logo" />
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/destination.html" class="active"
+                ><span>01</span>Destination
+              </a>
+            </li>
+
+            <li>
+              <a href="/crew.html"> <span>02</span>Crew </a>
+            </li>
+            <li>
+              <a href="/technology.html"> <span>03</span>Technology </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="desktop-navigation">
+        <img src="../assets/logo.svg" width="40" height="40" alt="site logo" />
+        <div class="line"></div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/" class="active"><span>00</span>Home</a>
+            </li>
+            <li>
+              <a href="/destination.html"> <span>01</span>Destination </a>
+            </li>
+
+            <li>
+              <a href="/crew.html"> <span>02</span>Crew </a>
+            </li>
+            <li>
+              <a href="/technology.html"> <span>03</span>Technology </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    
+    <div class="technology-wrapper">
+        <div class="title-wrapper">
+            <h1 class="title"><span>03</span> SPACE LAUNCH 101</h1>
+        </div>
+
+
+        <div class="content-wrapper">
+            <img id="image" src="../assets/technology/slides/image-launch-vehicle-portrait.jpg" width="" height="" loading="eager"
+                alt="launch vehicle">
+
+
+            <div class="data-wrapper">
+                <div class="dot-navigation">
+                    <div class="dot active">
+                        <span>1</span>
+                    </div>
+                    <div class="dot">
+                        <span>2</span>
+                    </div>
+                    <div class="dot">
+                        <span>3</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <h2>THE TERMINOLOGY…</h2>
+                    <h3 id="title">LAUNCH VEHICLE</h3>
+                    <p id="content">
+                        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from
+                        Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                        powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch
+                        pad!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const data = [
+        {
+            image: "../assets/technology/slides/image-launch-vehicle-portrait.jpg",
+            title: "LAUNCH VEHICLE",
+            content: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+        },
+        {
+            image: "../assets/technology/slides/image-spaceport-portrait.jpg",
+            title: "SPACEPORT",
+            content: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+        },
+        {
+            image: "../assets/technology/slides/image-space-capsule-portrait.jpg",
+            title: "SPACE CAPSULE",
+            content: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+        }
+    ]
+
+    const contentImage = document.getElementById("image");
+    const titleNode = document.getElementById("title");
+    const contentNode = document.getElementById("content");
+
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            dots.forEach(x => x.classList.remove("active"));
+
+            dot.classList.add("active");
+
+            contentImage.src = data[index].image;
+            titleNode.innerText = data[index].title;
+            contentNode.innerText = data[index].content;
+        })
+    })
+</script>
+
+</html>

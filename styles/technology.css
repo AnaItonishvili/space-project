@@ -1,0 +1,110 @@
+body {
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.technology-wrapper {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+
+  margin-bottom: 88px;
+}
+
+.title {
+  font-size: 16px;
+  letter-spacing: 0.015em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+  font-weight: 300;
+}
+
+.title span {
+  font-weight: 700;
+  opacity: 25%;
+}
+
+.technology-wrapper img {
+  width: 100%;
+  height: 258px;
+
+  object-fit: cover;
+
+  margin-bottom: 32px;
+}
+
+.dot-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+
+  margin-bottom: 40px;
+}
+
+.dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ffffff25;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot.active {
+  background-color: #FFF;
+  border-color: #FFF;
+}
+
+
+.dot.active span {
+  color: #000;
+}
+
+.dot span {
+  font-family: "Bellefair";
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 18px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #FFF;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  color: #D0D6F9;
+  text-align: center;
+  line-height: 180%;
+}
+
+
+.data-wrapper {
+  max-width: 327px;
+  margin: 0 auto;
+}
